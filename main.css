@@ -1,627 +1,739 @@
-html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato|PT+Serif:700');
 
 body {
     margin: 0;
 }
 
 nav {
+    background: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    height: 54px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 0;
-    display: block;
-    max-width: 1600px;
-    margin: 0 auto;
-    background: rgb(243, 243, 243);
-    border-bottom: 2px rgb(200, 200, 200) solid;
-    padding: 0 20px 0;
     z-index: 100;
-}
-
-nav a h1 {
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    padding: 0 8px 0;
-    text-transform: capitalize;
-    font-size: 20px;
-    margin: 0;
-    font-size: 1.6em;
-}
-
-nav h1 span {
-    color: rgb(105, 105, 105);
-}
-
-i#circle {
-    color: rgb(161, 245, 106);
-}
-
-i#square {
-    color: rgb(53, 210, 231);
+    padding: 0 20px;
 }
 
 nav a {
+    color: rgb(39, 39, 39);
+    padding: 8px 20px;
+    margin: 8px 0;
+    float: left;
     display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(105, 105, 105);
-    padding: 16px 8px;
     text-decoration: none;
+    transition: .2s;
+    border-radius: 50px;
+}
+
+nav span {
+    color: rgb(39, 39, 39);
+    padding: 2px 20px;
+    margin: 8px 0;
+    float: left;
+    display: none;
+    text-decoration: none;
+    transition: .2s;
+    border-radius: 50px;
+    font-size: 28px;
+    background: rgb(0, 132, 255);
+    color: white;
+}
+
+nav a#booking {
+    color: white;
+    background: rgb(0, 132, 255);
+    float: right;
+    margin: 8px 0px 8px 20px;
+}
+
+nav a.social {
+    float: right;
+    padding: 3px 6px;
+    font-size: 26px;
+    color: rgb(68, 68, 68)
+}
+
+nav a i {
+    margin-right: 4px;
+}
+
+nav a.social i {
+    margin: 0;
+}
+
+nav a:hover, nav span:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a.social:hover {
+    box-shadow: 0 0 0 transparent;
+    color: rgb(0, 132, 255);
+}
+
+nav a#facebook:hover {
+    color: #3B5998;
+}
+
+nav a#instagram:hover {
+    color: #c32aa3;
+}
+
+nav a#youtube:hover {
+    color: #ff0000;
+}
+
+nav a#booking:hover {
+    background: white;
+    color: rgb(0, 132, 255);
+}
+
+header {
+    background: linear-gradient(to right, rgba(0, 132, 255, 0.95) 60%, rgba(0, 0, 0, 0.25)), url("https://images.unsplash.com/photo-1531901783755-825e82c0d762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1362&q=80");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 12vw 200px;
+}
+
+header h1 {
+    font-family: 'PT Serif', serif;
+    color: white;
+    font-size: 48px;
+    max-width: 700px;
+    margin: 0;
+}
+
+header p {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 28px;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+header a {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    border: 3px white solid;
+    padding: 10px 20px;
+    margin-top: 10px;
     text-transform: uppercase;
-    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 50px;
 }
 
-nav a:hover {
-    color: rgb(53, 210, 231);
-}
-
-main {
-    max-width: 1600px;
-    margin: 0 auto;
+article {
+    border-radius: 10px;
+    background: white;
+    max-width: 1200px;
+    margin: -100px auto 40px;
+    padding: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-div.content_box {
-    padding: 60px 30px;
+article div.content {
+    padding: 20px;
 }
 
-.teal_background {
-    background: rgb(53, 210, 231);
-}
-
-.mint_background {
-    background: rgb(161, 245, 106);
-}
-
-.grey_background {
-    background: rgb(228, 228, 228);
-    border-top: 12px rgb(161, 245, 106) solid;
-}
-
-.white_background {
-    background: rgb(240, 240, 240);
-    border-top: 12px rgb(53, 210, 231) solid;
-}
-
-.iphone_background {
-    background: rgb(53, 210, 231) url('https://lh3.googleusercontent.com/Ec7THHX2wqeIlk4GBfT_nvFIjnw4n4P7j_3d1p7_VDqu8f-x9HdDmNSrNSN4SNMhJp2Wc2tx2tanUaVQeEat=w0');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-div.content_box h1 {
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 4em;
-    line-height: 1em;
-    margin: 10px 0 10px;
-}
-
-div.content_box label,
-div.content_box h2 {
-    clear: both;
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-    line-height: 1em;
-    text-transform: uppercase;
-}
-
-div.content_box input {
-    border: none;
-    border-bottom: 3px solid rgb(17, 17, 17);
-    padding: 6px 6px 4px;
-    margin: 10px 0;
-    background: rgb(243, 243, 243);
-    width: 60%;
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-}
-
-div.content_box textarea {
-    height: 120px;
-    border: none;
-    border-bottom: 3px solid rgb(17, 17, 17);
-    padding: 6px 6px 4px;
-    margin: 10px 0;
-    background: rgb(243, 243, 243);
-    width: 80%;
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-    resize: none;
-}
-
-div.content_box button {
-    display: inline-block;
-    font-family: roboto-condensed,
-        sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    border: 2px rgb(17, 17, 17) solid;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.6em;
-    margin: 0 0 24px;
-}
-
-div.content_box p {
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-    line-height: 1.2em;
-}
-
-div.content_box p.no_margin {
-    margin: 6px 0 0;
-}
-
-div.content_box a {
-    display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    border: 2px rgb(17, 17, 17) solid;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.6em;
-    margin: 0 0 24px;
-}
-
-div.content_box a.simple {
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.6em;
-    margin: 10px 0 0;
-    border: none;
-    text-decoration: underline;
-    padding: 0;
-}
-
-div.content_box i {
-    margin-top: 20px;
-    font-size: 32px;
-    float: left;
-    margin-bottom: 10px;
-}
-
-div.content_box#quote_container {
-    max-width: 340px;
-    margin: 0 auto;
-    display: block;
-    padding: 0;
+article div.image#startups {
+    background: url("https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-div.content_box div#quote {
-    display: block;
-    font-family: roboto-condensed,
-        sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 8em;
-    line-height: 1em;
-    text-transform: uppercase;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 10vh;
-}
-
-#center {
-    text-align: center;
-    font-size: 1.6em;
-    margin-top: 10px;
-}
-
-.banner {
-    display: block;
-    max-width: 1600px;
-    margin: 0 auto;
-    background: rgb(243, 243, 243);
-    border-bottom: 2px rgb(200, 200, 200) solid;
-    padding: 30px 20px;
-}
-
-.banner#teal {
-    padding: 60px 20px;
-    background: rgb(53, 210, 231);
-    border-bottom: 2px rgb(32, 125, 138) solid;
-}
-
-.banner h1 {
-    display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(105, 105, 105);
-    text-transform: uppercase;
-    font-size: 3em;
+article div.content h1 {
+    font-family: 'PT Serif', serif;
+    color: rgb(68, 68, 68);
+    font-size: 42px;
     margin: 0;
 }
 
-.banner#teal h1 {
-    color: rgb(17, 17, 17);
-    max-width: 1000px;
-    text-transform: none;
-    padding-bottom: 10px;
-}
-
-.banner#teal h2 {
-    clear: both;
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(32, 125, 138);
-    font-size: 1.6em;
-    line-height: 1em;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.banner#teal a {
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.6em;
-    margin: 0;
-}
-
-section {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-section.even {
-    grid-template-columns: repeat(4, 1fr)
-}
-
-section div {
-    padding: 40px 20px;
-}
-
-section h1 {
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 3em;
-    line-height: 1em;
+article div.content p {
+    font-family: 'Lato', sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 22px;
     margin: 10px 0;
 }
 
-section h2 {
-    clear: both;
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(105, 105, 105);
-    font-size: 1.4em;
-    line-height: 1em;
-    text-transform: uppercase;
-}
-
-section p {
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-    line-height: 1.2em;
-    clear: both;
-}
-
-section hr {
-    border: 2px rgb(17, 17, 17) solid;
-    width: 30px;
-    float: left;
-    margin: 10px 0 26px;
-}
-
-section img {
-    display: block;
-    width: 150px;
-    border-radius: 50%;
-    margin: 10px auto 30px;
-}
-
-section a {
+article div.content a {
     display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.6em;
-    margin: 0 0 24px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(0, 132, 255);
+    font-size: 18px;
+    text-decoration: none;
+    background: white;
+    margin-top: 10px;
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+article form label {
+    display: block;
+    font-family: 'Lato',
+        sans-serif;
+    color: rgb(0, 132, 255);
+    font-size: 22px;
+    margin: 6px 0 4px;
+}
+
+article form input {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    display: block;
+    font-family: 'Lato';
+    color: rgb(128, 128, 128);
+    font-size: 18px;
+}
+
+article form textarea {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    display: block;
+    font-family: 'Lato';
+    color: rgb(128, 128, 128);
+    font-size: 18px;
+    resize: none;
+    height: 180px;
+    width: 80%;
+}
+
+.submitBtn {
+    display: inline-block;
+    font-family: 'Lato',
+        sans-serif;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    background: rgb(0, 132, 255);
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px 0 0;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Contact Us Page, Thank You modal appearing after submit button pressed. */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+
 
 aside {
-    background-image: url('https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to right, rgba(0, 132, 255, 0.95) 60%, rgba(0, 0, 0, 0.25)), url("https://images.unsplash.com/photo-1531901783755-825e82c0d762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1362&q=80");
     background-position: center;
-    max-width: 1600px;
-    margin: 0 auto;
-    display: block;
-    padding: 80px;
-}
-
-aside#taxes {
-    background-image: url('https://images.pexels.com/photos/1451448/pexels-photo-1451448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+    background-size: cover;
+    padding: 30px 12vw 110px;
 }
 
 
 aside h1 {
-    display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: bold;
-    font-style: unset;
-    color: rgb(17, 17, 17);
-    padding: 30px 20px;
-    font-size: 3em;
-    line-height: 1em;
-    margin: 300px 0 0 0;
-    max-width: 560px;
-    background: rgba(162, 245, 106, 0.719);
-    border-radius: 20px;
-}
-
-aside h2 {
-    display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    padding: 30px 20px;
-    font-size: 2em;
-    line-height: 1em;
-    margin: 0;
-    max-width: 560px;
-    background: rgba(53, 210, 231, 0.966);
-    border-radius: 20px;
-}
-
-.pricing_table {
-    max-width: 1600px;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    color: white;
+    font-size: 48px;
     margin: 0 auto;
+}
+
+aside p {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 28px;
+    max-width: 600px;
+    margin: 10px auto 0;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+aside a {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: rgb(0, 132, 255);
+    font-size: 18px;
+    text-decoration: none;
+    background: white;
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px 0 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section {
+    max-width: 1200px;
+    margin: -100px auto 40px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+ 
+section#pricing {
+    margin: 20px calc(auto + 20px);
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.pricing_table .column {
-    padding: 20px;
+section div {
+    position: relative;
+    background: white;
+    padding: 0;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: .2s;
+    transition: transform 0s;
 }
 
-.pricing_table .column h1 {
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 3em;
-    line-height: 1em;
-    margin: 2px 0 10px;
+section#pricing>div {
+    margin: 40px 0;
+    background: white;
 }
 
-.pricing_table .column h2 {
-    clear: both;
-    display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(105, 105, 105);
-    font-size: 1.4em;
-    line-height: 1em;
-    text-transform: uppercase;
+section#faq>div {
+    overflow: hidden;
 }
 
-.pricing_table .column p {
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-    line-height: 1.2em;
-    clear: both;
+section#pricing div:nth-last-of-type(2) {
+    transform: scale(1.075);
+    z-index: 20;
 }
 
-.pricing_table .column hr {
-    border: 2px rgb(17, 17, 17) solid;
-    width: 30px;
-    float: left;
-    margin: 10px 0 26px;
-}
-
-.faq {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.faq .question {
-    padding: 20px;
-    flex: 1 1 380px;
-}
-
-.faq h1 {
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    text-transform: none;
+section div.image {
+    background: linear-gradient(to right, rgba(0, 132, 255, 0.95), rgba(0, 0, 0, 0.25)), url("https://images.unsplash.com/photo-1531901783755-825e82c0d762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1362&q=80");
+    background-position: center;
+    background-size: cover;
+    min-height: 240px;
     margin: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-.faq h2 {
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.4em;
-    line-height: 1.2em;
-    clear: both;
+section div h1 {
+    font-family: 'PT Serif', serif;
+    color: rgb(68, 68, 68);
+    font-size: 32px;
+    margin: 0;
+    padding: 20px 20px 8px;
 }
 
-.faq p {
-    font-family: roboto-slab, serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.2em;
-    line-height: 1.2em;
-    clear: both;
+section#pricing>div h1 {
+    padding: 0 30px 12px;
+    line-height: 24px;
 }
 
-.faq a {
+section div h2 {
+    font-family: 'PT Serif', serif;
+    color: rgb(68, 68, 68);
+    font-size: 18px;
+    margin: 0;
+    padding: 20px 20px 8px;
+
+}
+
+section#pricing>div h2 {
+    font-family: 'Lato', sans-serif;
+    margin: 0px 30px 8px;
+    color: rgb(128, 128, 128);
+    padding: 12px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+}
+
+section div h3 {
+    font-family: 'PT Serif', serif;
+    color: rgb(0, 132, 255);
+    font-size: 48px;
+    margin: 0;
+    padding: 20px 20px 8px;
+}
+
+section#pricing>div h3 {
+    padding: 12px 30px 0;
+    line-height: 24px;
+    text-align: center;
+}
+
+section#pricing>div h3 span {
+    font-family: 'Lato', sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 22px;
+}
+
+section div p {
+    font-family: 'Lato', sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 22px;
+    margin: 0;
+    padding: 0 20px 8px;
+}
+
+section#pricing>div p {
+    padding: 0 30px 8px;
+}
+
+section#faq>div p {
+    opacity: 0;
+    position: relative;
+    top: 200px;
+    height: 0px;
+    transition: .6s;
+}
+
+
+
+section#faq>div p.show {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+    height: auto;
+}
+
+section div h4 {
+    font-family: 'Lato', sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 16px;
+    margin: 0;
+    padding: 0 20px 8px;
+
+}
+
+section#pricing>div h4 {
+    padding: 20px 30px 8px;
+    text-transform: uppercase;
+    color: rgb(0, 132, 255);
+}
+
+
+section div a, section div button, section#faq div i {
+    border: 0;
     display: inline-block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    font-size: 1.6em;
-    margin: 0 0 24px;
+    color: rgb(0, 132, 255);
+    font-size: 18px;
+    text-decoration: none;
+    background: white;
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px 30px;
+    transition: .2s;
+}
+
+section div a, section div button {
+    font-family: 'Lato', sans-serif;
+}
+
+
+section#faq>div {
+    position: relative;
+    padding-bottom: 120px;
+}
+
+
+section#faq div i {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 34px;
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+
+section#faq div i.click {
+    transform: scale(-1) translateX(50%);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section#pricing>div a {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    background: rgb(0, 132, 255);
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0 30px;
+    transition: .2s;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section div a:hover,  section div button:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+div.contact_cards {
+    max-width: 1400px;
+    margin: -100px auto 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.contact_cards>div {
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: white;
+    transition: .2s;
+}
+
+
+div.contact_cards div i {
+    font-size: 64px;
+    color: rgb(0, 132, 255);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.contact_cards div img {
+    display: block;
+    border-radius: 50%;
+    height: 128px;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: .2s;
+}
+
+div.contact_cards div h1 {
+    font-family: 'PT Serif', serif;
+    color: rgb(68, 68, 68);
+    font-size: 42px;
+    margin: 10px 10px 0;
+    text-align: center;
+}
+
+div.contact_cards div h2 {
+    font-family: 'PT Serif', serif;
+    color: rgb(68, 68, 68);
+    font-size: 32px;
+    margin: 16px 10px 0;
+    text-align: center;
+}
+
+div.contact_cards div h4 {
+    font-family: 'PT Serif', serif;
+    color: rgb(128, 128, 128);
+    font-size: 22px;
+    margin: 0 10px 0;
+    text-align: center;
+}
+
+div.contact_cards div hr {
+    border: 2px rgb(0, 132, 255) solid;
+    width: 40px;
+}
+
+div.contact_cards div p {
+    font-family: 'Lato', sans-serif;
+    color: rgb(128, 128, 128);
+    font-size: 22px;
+    margin: 0 0 6px;
+    text-align: center;
+}
+
+div.contact_cards div a {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    color: rgb(0, 132, 255);
+    font-size: 18px;
+    text-decoration: none;
+    background: white;
+    padding: 16px 26px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px 0 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 footer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background: rgb(17, 17, 17);
-    border-top: 2px rgb(105, 105, 105) solid;
-    padding: 20px 20px 60px;
-    max-width: 1600px;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: rgb(39, 39, 39);
+    padding: 40px 40px 80px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-footer div {
-    padding: 20px;
+footer div h1 {
+    text-align: left;
+    font-family: 'PT Serif', serif;
+    color: white;
+    font-size: 36px;
+    margin: 0;
 }
 
-footer h1 {
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(17, 17, 17);
-    text-transform: none;
-    margin: 0 0 10px;
-    color: rgb(53, 210, 231);
-}
-
-footer hr {
-    border: 2px rgb(161, 245, 106) solid;
-    width: 30px;
+footer div hr {
+    border: none;
+    border: 2px rgb(0, 132, 255) solid;
+    width: 50px;
     float: left;
-    margin: 10px 0 26px;
+    margin-bottom: 10px;
 }
 
-footer a {
+footer div a {
     clear: both;
+    font-family: 'Lato', sans-serif;
+    color: rgb(216, 216, 216);
+    font-size: 16px;
     display: block;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(200, 200, 200);
-    font-size: 1.2em;
     text-decoration: none;
-    margin-top: 8px;
+    margin: 6px 0;
 }
 
-footer a:hover {
-    text-decoration: underline;
-    text-decoration-color: rgb(161, 245, 106);
+footer div a span {
+    text-transform: uppercase;
+    color: rgb(0, 132, 255);
+    font-size: 16px;
 }
 
-footer a i {
-    color: rgb(161, 245, 106);
-    font-size: 24px;
-    margin-right: 8px;
+footer div a i {
+    margin-right: 4px;
+    color: rgb(0, 132, 255);
 }
 
-div.copyright {
-    background: rgb(17, 17, 17);
-    border-top: 2px rgb(53, 210, 231) solid;
-    font-family: roboto-condensed, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(105, 105, 105);
-    padding: 10px;
-    max-width: 1600px;
-    margin: 0 auto;
+section#faq div.center {
+    overflow: auto;
+    margin: 0;
 }
 
-@media (max-width: 990px) {
-    main {
+section#faq div i.click {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1260px) {
+    div.contact_cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    footer div:nth-of-type(2), footer div:nth-of-type(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section#pricing {
         grid-template-columns: 1fr;
+    }
+
+    section#pricing div:nth-of-type(2) {
+        transform: scale(1);
+    }
+
+    nav a.social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        grid-template-columns: 1fr;
+    }
+
+    div.image {
+        height: 400px;
+        display: block;
     }
 
     section {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    section.even {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    footer {
-        grid-template-columns: repeat(3, 1fr)
-    }
-
-
-    div.content_box#quote_container {
-        padding: 40px 0;
-        width: 220px;
-    }
-
-}
-
-@media (max-width: 650px) {
-    .pricing_table {
         grid-template-columns: 1fr;
     }
 
+    div.contact_cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav span {
+        display: inline-block;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 524px) {
     footer {
         grid-template-columns: 1fr;
     }
